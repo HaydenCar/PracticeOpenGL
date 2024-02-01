@@ -35,7 +35,7 @@
     <ClInclude Include="dependencies\include\KHR\khrplatform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="shaders\shader_s.h">
+    <ClInclude Include="headers\shader_s.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -43,7 +43,7 @@
     <Library Include="dependencies\lib\glfw3.lib" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\shader.vs" />
-    <None Include="shaders\shader.fs" />
+    <None Include="shaders\3.3.shaderF.shader" />
+    <None Include="shaders\3.3.shaderV.shader" />
   </ItemGroup>
 </Project>

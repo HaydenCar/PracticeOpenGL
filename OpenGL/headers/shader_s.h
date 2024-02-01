@@ -1,4 +1,3 @@
-#pragma once
 #ifndef SHADER_H
 #define SHADER_H
 
@@ -47,7 +46,7 @@ public:
         }
         const char* vShaderCode = vertexCode.c_str();
         const char* fShaderCode = fragmentCode.c_str();
-        // 2. compile shaders
+        // compile shaders
         unsigned int vertex, fragment;
         // vertex shader
         vertex = glCreateShader(GL_VERTEX_SHADER);
@@ -91,10 +90,8 @@ public:
     {
         glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
     }
-
 private:
     // utility function for checking shader compilation/linking errors.
-    // ------------------------------------------------------------------------
     void checkCompileErrors(unsigned int shader, std::string type)
     {
         int success;
@@ -119,4 +116,6 @@ private:
         }
     }
 };
-#endif
+
+
+#endif 
