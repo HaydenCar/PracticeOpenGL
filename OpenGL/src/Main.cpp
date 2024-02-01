@@ -40,6 +40,8 @@ int main()
         return -1;
     }
 
+    std::cout << glGetString(GL_VERSION) << std::endl;
+
     // build and compile our shader program
     Shader ourShader("shaders/3.3.shaderV.shader", "shaders/3.3.shaderF.shader");
 
@@ -50,6 +52,15 @@ int main()
         -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // bottom left
          0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top 
     };
+
+    float texCoords[] = {
+    0.0f, 0.0f,  // lower-left corner  
+    1.0f, 0.0f,  // lower-right corner
+    0.5f, 1.0f   // top-center corner
+    };
+    
+    //glTextureParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT); NEW CHAPTER
+    //glTextureParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
 
     unsigned int VBO, VAO;
     glGenVertexArrays(1, &VAO);
